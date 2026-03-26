@@ -178,5 +178,22 @@
         </p>
         <a href="/" class="return-link">Return to the Keep</a>
     </main>
+
+    <script>
+        const crispWebsiteId = '49baacf1-9675-4a8d-85dd-2d34f87c1781';
+
+        if (crispWebsiteId) {
+            window.$crisp = [];
+            window.CRISP_WEBSITE_ID = crispWebsiteId;
+
+            (function() {
+                const documentHead = document.getElementsByTagName('head')[0];
+                const crispScript = document.createElement('script');
+                crispScript.src = 'https://client.crisp.chat/l.js';
+                crispScript.async = true;
+                documentHead.appendChild(crispScript);
+            })();
+        }
+    </script>
 </body>
 </html>

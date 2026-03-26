@@ -1000,6 +1000,26 @@
             color: var(--deep-navy);
             box-shadow: 0 0 40px rgba(201, 168, 76, 0.25);
         }
+        .banner-actions {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: center;
+            gap: 1rem;
+        }
+        .banner-secondary-link {
+            display: inline-block;
+            margin-top: 1.25rem;
+            font-family: 'Cinzel', serif;
+            font-size: 0.68rem;
+            letter-spacing: 0.16em;
+            text-transform: uppercase;
+            text-decoration: none;
+            color: var(--text-secondary);
+            transition: color 0.3s ease;
+        }
+        .banner-secondary-link:hover {
+            color: var(--gold);
+        }
 
         /* ===== FOOTER ===== */
         footer {
@@ -1053,6 +1073,14 @@
             color: var(--text-secondary);
             text-align: center;
             max-width: 500px;
+        }
+        .footer-contact-note {
+            font-family: 'Cormorant Garamond', serif;
+            font-size: 1rem;
+            color: var(--text-secondary);
+            text-align: center;
+            max-width: 500px;
+            margin-top: -0.5rem;
         }
         .footer-links {
             display: flex;
@@ -1670,8 +1698,11 @@
         <div class="banner-cross" aria-hidden="true"></div>
         <div class="banner-content reveal-scale">
             <h2 class="glow-gold">Join the Crusade</h2>
-            <p>Ready to build something that matters? We're looking for those who share the vision.</p>
-            <a href="mailto:vondrashekenterprises@gmail.com" class="btn-outline">Get in Touch</a>
+            <p>Have questions or a project in mind? Open the chat and we will respond, or reach out by email if you prefer.</p>
+            <div class="banner-actions">
+                <a href="#contact" class="btn-outline" data-chat-open>Open Chat</a>
+            </div>
+            <a href="mailto:vondrashekenterprises@gmail.com" class="banner-secondary-link">Prefer email? vondrashekenterprises@gmail.com</a>
         </div>
     </section>
 
@@ -1691,13 +1722,15 @@
                 <span>Crusadesoft</span>
             </div>
             <p class="footer-motto">"We work for the glory of God, consecrating every effort to His purpose."</p>
+            <p class="footer-contact-note">Questions about your project? Start a chat or send us an email.</p>
             <ul class="footer-links">
                 <li><a href="#mission">Mission</a></li>
                 <li><a href="#pillars">Pillars</a></li>
                 <li><a href="#products">Products</a></li>
                 <li><a href="#services">Arsenal</a></li>
                 <li><a href="#manifesto">Manifesto</a></li>
-                <li><a href="mailto:vondrashekenterprises@gmail.com">Contact</a></li>
+                <li><a href="#contact" data-chat-open>Chat</a></li>
+                <li><a href="mailto:vondrashekenterprises@gmail.com">Email</a></li>
             </ul>
             <div class="footer-rule"></div>
             <p class="footer-copy">&copy; MMXXVI Crusadesoft. All rights reserved. &nbsp;|&nbsp; Soli Deo Gloria</p>
@@ -1705,6 +1738,23 @@
     </footer>
 
     <script>
+        const chatFallbackEmail = 'mailto:vondrashekenterprises@gmail.com';
+        const crispWebsiteId = '49baacf1-9675-4a8d-85dd-2d34f87c1781';
+        const crispEnabled = Boolean(crispWebsiteId);
+
+        if (crispEnabled) {
+            window.$crisp = [];
+            window.CRISP_WEBSITE_ID = crispWebsiteId;
+
+            (function() {
+                const documentHead = document.getElementsByTagName('head')[0];
+                const crispScript = document.createElement('script');
+                crispScript.src = 'https://client.crisp.chat/l.js';
+                crispScript.async = true;
+                documentHead.appendChild(crispScript);
+            })();
+        }
+
         // ===== PRELOADER =====
         window.addEventListener('load', () => {
             setTimeout(() => {
@@ -1731,6 +1781,19 @@
             link.addEventListener('click', () => {
                 navLinks.classList.remove('open');
                 hamburger.classList.remove('open');
+            });
+        });
+
+        // ===== CHAT CTA LINKS =====
+        document.querySelectorAll('[data-chat-open]').forEach(link => {
+            link.addEventListener('click', event => {
+                if (crispEnabled && window.$crisp) {
+                    event.preventDefault();
+                    window.$crisp.push(['do', 'chat:open']);
+                } else {
+                    event.preventDefault();
+                    window.location.href = chatFallbackEmail;
+                }
             });
         });
 
