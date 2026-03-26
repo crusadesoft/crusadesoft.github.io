@@ -213,7 +213,7 @@
         .hero-img {
             position: absolute;
             inset: 0;
-            background: url('Taking_of_Jerusalem_by_the_Crusaders,_15th_July_1099.jpg') center center / cover no-repeat;
+            background: url('taking-of-jerusalem.jpg') center center / cover no-repeat;
             opacity: 0.10;
         }
         .hero-bg {
@@ -481,7 +481,7 @@
         .mission-img {
             position: absolute;
             inset: 0;
-            background: url('Folio_86v_-_The_Funeral_of_Raymond_Diocrès_(cropped).jpg') center center / cover no-repeat;
+            background: url('funeral-of-raymond-diocres.jpg') center center / cover no-repeat;
             opacity: 0.10;
         }
         .mission-bg {
@@ -559,7 +559,7 @@
         .pillars-img {
             position: absolute;
             inset: 0;
-            background: url('Accolade_by_Edmund_Blair_Leighton.jpg') center center / cover no-repeat;
+            background: url('accolade-leighton.jpg') center center / cover no-repeat;
             opacity: 0.10;
         }
         .pillars-bg {
@@ -649,6 +649,134 @@
             z-index: 1;
         }
 
+        /* ===== PRODUCTS ===== */
+        .products {
+            background: var(--deep-navy);
+        }
+        .product-card {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 4rem;
+            align-items: center;
+            max-width: 1000px;
+            margin: 0 auto;
+        }
+        .product-info h3 {
+            font-family: 'Cinzel', serif;
+            font-size: 1.8rem;
+            font-weight: 700;
+            color: var(--cream);
+            margin-bottom: 0.5rem;
+        }
+        .product-info .product-tagline {
+            font-family: 'Cinzel', serif;
+            font-size: 0.75rem;
+            letter-spacing: 0.2em;
+            text-transform: uppercase;
+            color: var(--gold);
+            margin-bottom: 2rem;
+        }
+        .product-info p {
+            font-size: 1.15rem;
+            line-height: 2;
+            color: var(--cream-dim);
+            margin-bottom: 2rem;
+        }
+        .product-features {
+            list-style: none;
+            margin-bottom: 2.5rem;
+        }
+        .product-features li {
+            font-family: 'Cormorant Garamond', serif;
+            font-size: 1.05rem;
+            color: var(--text-secondary);
+            padding: 0.4rem 0;
+            padding-left: 1.5rem;
+            position: relative;
+        }
+        .product-features li::before {
+            content: '\2726';
+            position: absolute;
+            left: 0;
+            color: var(--gold);
+            font-size: 0.7rem;
+            top: 0.55rem;
+        }
+        .product-cta {
+            display: inline-block;
+            font-family: 'Cinzel', serif;
+            font-size: 0.75rem;
+            font-weight: 700;
+            letter-spacing: 0.25em;
+            text-transform: uppercase;
+            text-decoration: none;
+            color: var(--gold);
+            padding: 0.9rem 2rem;
+            border: 1px solid var(--gold);
+            transition: all 0.4s ease;
+        }
+        .product-cta:hover {
+            background: var(--gold);
+            color: var(--deep-navy);
+            box-shadow: 0 0 30px rgba(201, 168, 76, 0.2);
+        }
+        .product-visual {
+            position: relative;
+            border: 1px solid rgba(201, 168, 76, 0.1);
+            padding: 2px;
+            background: rgba(201, 168, 76, 0.02);
+        }
+        .product-visual::before {
+            content: '';
+            position: absolute;
+            inset: -1px;
+            background: linear-gradient(135deg, rgba(201,168,76,0.2), transparent 50%, rgba(201,168,76,0.1));
+            z-index: -1;
+            padding: 1px;
+        }
+        .product-screenshot {
+            width: 100%;
+            height: auto;
+            display: block;
+            opacity: 0.85;
+            transition: opacity 0.4s ease;
+        }
+        .product-visual:hover .product-screenshot {
+            opacity: 1;
+        }
+        .product-placeholder {
+            width: 100%;
+            aspect-ratio: 16/10;
+            background:
+                radial-gradient(ellipse at 50% 50%, rgba(201, 168, 76, 0.06) 0%, transparent 70%),
+                linear-gradient(135deg, rgba(20,20,40,0.8), rgba(10,10,20,0.9));
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            flex-direction: column;
+            gap: 1rem;
+        }
+        .product-placeholder svg {
+            width: 48px;
+            height: 48px;
+            color: var(--gold);
+            opacity: 0.3;
+        }
+        .product-placeholder span {
+            font-family: 'Cinzel', serif;
+            font-size: 0.7rem;
+            letter-spacing: 0.2em;
+            text-transform: uppercase;
+            color: var(--gold);
+            opacity: 0.3;
+        }
+        @media (max-width: 968px) {
+            .product-card {
+                grid-template-columns: 1fr;
+                gap: 3rem;
+            }
+        }
+
         /* ===== WHAT WE BUILD ===== */
         .services {
             background: var(--deep-navy);
@@ -656,7 +784,7 @@
         .services-img {
             position: absolute;
             inset: 0;
-            background: url('Jean_Fouquet_-_The_Building_of_a_Cathedral_-_WGA8036.jpg') center center / cover no-repeat;
+            background: url('building-cathedral-fouquet.jpg') center center / cover no-repeat;
             opacity: 0.10;
         }
         .services-bg {
@@ -734,7 +862,7 @@
         .manifesto-img {
             position: absolute;
             inset: 0;
-            background: url('Eugène_Ferdinand_Victor_Delacroix_012.jpg') center center / cover no-repeat;
+            background: url('entry-of-crusaders-delacroix.jpg') center center / cover no-repeat;
             opacity: 0.10;
         }
         .manifesto-bg {
@@ -793,7 +921,7 @@
         .banner-img {
             position: absolute;
             inset: 0;
-            background: url('Combat_deuxième_croisade.jpg') center center / cover no-repeat;
+            background: url('combat-second-crusade.jpg') center center / cover no-repeat;
             opacity: 0.10;
         }
         .banner-bg {
@@ -885,7 +1013,7 @@
         .footer-img {
             position: absolute;
             inset: 0;
-            background: url('Hereford-Karte.jpg') center center / cover no-repeat;
+            background: url('hereford-mappa-mundi.jpg') center center / cover no-repeat;
             opacity: 0.10;
         }
         .footer-bg {
@@ -1174,6 +1302,7 @@
         <ul class="nav-links" id="navLinks">
             <li><a href="#mission">Mission</a></li>
             <li><a href="#pillars">Pillars</a></li>
+            <li><a href="#products">Products</a></li>
             <li><a href="#services">Arsenal</a></li>
             <li><a href="#manifesto">Manifesto</a></li>
             <li><a href="#contact">Contact</a></li>
@@ -1375,6 +1504,43 @@
         </div>
     </section>
 
+    <!-- Products Section -->
+    <section class="products section-padding" id="products">
+        <div class="container">
+            <div class="section-header reveal">
+                <span class="section-label">Our Creations</span>
+                <h2 class="section-title">Products</h2>
+                <div class="section-rule" aria-hidden="true"></div>
+            </div>
+
+            <div class="product-card">
+                <div class="product-info reveal-left">
+                    <h3>HolyChart</h3>
+                    <p class="product-tagline">Trackpad-First Infinite Canvas</p>
+                    <p>
+                        A diagramming tool built for the way you actually work. Most tools
+                        treat trackpads as second-class mice &mdash; HolyChart is designed
+                        around trackpad gestures from the ground up, including two-finger
+                        twist to rotate the canvas.
+                    </p>
+                    <ul class="product-features">
+                        <li>Infinite canvas with pan, pinch-to-zoom, and twist-to-rotate</li>
+                        <li>150+ icons with instant fuzzy search</li>
+                        <li>Boxes, text, arrows with solid, dashed, and animated styles</li>
+                        <li>Multi-select, diagram tabs, and auto-save</li>
+                        <li>Export and import diagrams as JSON</li>
+                    </ul>
+                    <a href="https://holychart.com" class="product-cta" target="_blank" rel="noopener">Launch HolyChart</a>
+                </div>
+                <div class="product-visual reveal-right">
+                    <a href="https://holychart.com" target="_blank" rel="noopener">
+                        <img src="holychart-screenshot.png" alt="HolyChart — infrastructure diagram on an infinite canvas with icons, connections, and diagram tabs" class="product-screenshot">
+                    </a>
+                </div>
+            </div>
+        </div>
+    </section>
+
     <!-- What We Build Section -->
     <section class="services section-padding" id="services">
         <div class="services-img" aria-hidden="true"></div>
@@ -1528,6 +1694,7 @@
             <ul class="footer-links">
                 <li><a href="#mission">Mission</a></li>
                 <li><a href="#pillars">Pillars</a></li>
+                <li><a href="#products">Products</a></li>
                 <li><a href="#services">Arsenal</a></li>
                 <li><a href="#manifesto">Manifesto</a></li>
                 <li><a href="mailto:contact@crusadesoft.com">Contact</a></li>
