@@ -210,66 +210,22 @@
             text-align: center;
             overflow: hidden;
         }
+        .hero-img {
+            position: absolute;
+            inset: 0;
+            background: url('Taking_of_Jerusalem_by_the_Crusaders,_15th_July_1099.jpg') center center / cover no-repeat;
+            opacity: 0.10;
+        }
         .hero-bg {
             position: absolute;
             inset: 0;
             background:
-                radial-gradient(ellipse at 50% 30%, rgba(139, 26, 26, 0.18) 0%, transparent 60%),
-                radial-gradient(ellipse at 50% 80%, rgba(201, 168, 76, 0.08) 0%, transparent 50%),
-                linear-gradient(180deg, var(--deep-navy) 0%, #0f0f22 50%, var(--deep-navy) 100%);
+                radial-gradient(ellipse at 50% 40%, rgba(139, 26, 26, 0.15) 0%, transparent 40%),
+                radial-gradient(ellipse at 50% 70%, rgba(201, 168, 76, 0.06) 0%, transparent 35%),
+                linear-gradient(180deg, var(--deep-navy) 0%, var(--deep-navy) 8%, rgba(10,10,20,0.5) 25%, rgba(10,10,20,0.5) 75%, var(--deep-navy) 92%, var(--deep-navy) 100%);
         }
 
-        /* Hero vignette */
-        .hero-vignette {
-            position: absolute;
-            inset: 0;
-            background: radial-gradient(ellipse at center, transparent 40%, rgba(0,0,0,0.6) 100%);
-            pointer-events: none;
-        }
 
-        /* Decorative cross watermark behind hero */
-        .hero-cross-bg {
-            position: absolute;
-            top: 50%;
-            left: 50%;
-            transform: translate(-50%, -50%);
-            width: 500px;
-            height: 700px;
-            opacity: 0.04;
-            pointer-events: none;
-        }
-        .hero-cross-bg::before,
-        .hero-cross-bg::after {
-            content: '';
-            position: absolute;
-            background: var(--gold);
-        }
-        .hero-cross-bg::before {
-            width: 80px;
-            height: 700px;
-            left: 50%;
-            transform: translateX(-50%);
-        }
-        .hero-cross-bg::after {
-            width: 380px;
-            height: 80px;
-            top: 160px;
-            left: 50%;
-            transform: translateX(-50%);
-        }
-
-        /* Subtle stone texture pattern on hero */
-        .hero-texture {
-            position: absolute;
-            inset: 0;
-            opacity: 0.015;
-            background-image:
-                radial-gradient(circle at 20% 50%, rgba(201,168,76,0.3) 1px, transparent 1px),
-                radial-gradient(circle at 80% 20%, rgba(201,168,76,0.2) 1px, transparent 1px),
-                radial-gradient(circle at 60% 80%, rgba(201,168,76,0.25) 1px, transparent 1px);
-            background-size: 120px 120px, 80px 80px, 100px 100px;
-            pointer-events: none;
-        }
 
         .hero-content {
             position: relative;
@@ -438,6 +394,7 @@
         section {
             position: relative;
             z-index: 1;
+            overflow: hidden;
         }
         .section-padding {
             padding: 8rem 2rem;
@@ -519,9 +476,20 @@
 
         /* ===== ABOUT / MISSION ===== */
         .mission {
+            background: var(--deep-navy);
+        }
+        .mission-img {
+            position: absolute;
+            inset: 0;
+            background: url('Folio_86v_-_The_Funeral_of_Raymond_Diocrès_(cropped).jpg') center center / cover no-repeat;
+            opacity: 0.10;
+        }
+        .mission-bg {
+            position: absolute;
+            inset: 0;
             background:
-                radial-gradient(ellipse at 30% 50%, rgba(201, 168, 76, 0.04) 0%, transparent 50%),
-                linear-gradient(180deg, var(--deep-navy), var(--dark-bg), var(--deep-navy));
+                radial-gradient(ellipse at 30% 50%, rgba(201, 168, 76, 0.04) 0%, transparent 35%),
+                linear-gradient(180deg, var(--deep-navy) 0%, var(--deep-navy) 8%, rgba(10,10,20,0.5) 25%, rgba(10,10,20,0.5) 75%, var(--deep-navy) 92%, var(--deep-navy) 100%);
         }
         .mission-grid {
             display: grid;
@@ -586,9 +554,20 @@
 
         /* ===== PILLARS ===== */
         .pillars {
+            background: var(--deep-navy);
+        }
+        .pillars-img {
+            position: absolute;
+            inset: 0;
+            background: url('Accolade_by_Edmund_Blair_Leighton.jpg') center center / cover no-repeat;
+            opacity: 0.10;
+        }
+        .pillars-bg {
+            position: absolute;
+            inset: 0;
             background:
-                radial-gradient(ellipse at 70% 30%, rgba(139, 26, 26, 0.08) 0%, transparent 50%),
-                var(--dark-surface);
+                radial-gradient(ellipse at 60% 40%, rgba(139, 26, 26, 0.08) 0%, transparent 35%),
+                linear-gradient(180deg, var(--deep-navy) 0%, var(--deep-navy) 8%, rgba(10,10,20,0.5) 25%, rgba(10,10,20,0.5) 75%, var(--deep-navy) 92%, var(--deep-navy) 100%);
         }
         .pillars-grid {
             display: grid;
@@ -672,9 +651,20 @@
 
         /* ===== WHAT WE BUILD ===== */
         .services {
+            background: var(--deep-navy);
+        }
+        .services-img {
+            position: absolute;
+            inset: 0;
+            background: url('Jean_Fouquet_-_The_Building_of_a_Cathedral_-_WGA8036.jpg') center center / cover no-repeat;
+            opacity: 0.10;
+        }
+        .services-bg {
+            position: absolute;
+            inset: 0;
             background:
-                radial-gradient(ellipse at 20% 80%, rgba(201, 168, 76, 0.05) 0%, transparent 50%),
-                linear-gradient(180deg, var(--deep-navy) 0%, var(--dark-surface) 100%);
+                radial-gradient(ellipse at 30% 60%, rgba(201, 168, 76, 0.05) 0%, transparent 35%),
+                linear-gradient(180deg, var(--deep-navy) 0%, var(--deep-navy) 8%, rgba(10,10,20,0.5) 25%, rgba(10,10,20,0.5) 75%, var(--deep-navy) 92%, var(--deep-navy) 100%);
         }
         .services-intro {
             text-align: center;
@@ -739,9 +729,20 @@
 
         /* ===== MANIFESTO ===== */
         .manifesto {
+            background: var(--deep-navy);
+        }
+        .manifesto-img {
+            position: absolute;
+            inset: 0;
+            background: url('Eugène_Ferdinand_Victor_Delacroix_012.jpg') center center / cover no-repeat;
+            opacity: 0.10;
+        }
+        .manifesto-bg {
+            position: absolute;
+            inset: 0;
             background:
-                radial-gradient(ellipse at 50% 50%, rgba(139, 26, 26, 0.12) 0%, transparent 60%),
-                var(--dark-surface);
+                radial-gradient(ellipse at 50% 50%, rgba(139, 26, 26, 0.10) 0%, transparent 35%),
+                linear-gradient(180deg, var(--deep-navy) 0%, var(--deep-navy) 8%, rgba(10,10,20,0.5) 25%, rgba(10,10,20,0.5) 75%, var(--deep-navy) 92%, var(--deep-navy) 100%);
         }
         .manifesto-content {
             max-width: 800px;
@@ -793,14 +794,14 @@
             position: absolute;
             inset: 0;
             background: url('Combat_deuxième_croisade.jpg') center center / cover no-repeat;
-            opacity: 0.15;
+            opacity: 0.10;
         }
         .banner-bg {
             position: absolute;
             inset: 0;
             background:
-                radial-gradient(ellipse at 50% 50%, rgba(139, 26, 26, 0.4) 0%, transparent 60%),
-                linear-gradient(180deg, var(--deep-navy) 0%, rgba(10,10,20,0.6) 30%, rgba(10,10,20,0.6) 70%, var(--deep-navy) 100%);
+                radial-gradient(ellipse at 50% 50%, rgba(139, 26, 26, 0.15) 0%, transparent 35%),
+                linear-gradient(180deg, var(--deep-navy) 0%, var(--deep-navy) 8%, rgba(10,10,20,0.5) 25%, rgba(10,10,20,0.5) 75%, var(--deep-navy) 92%, var(--deep-navy) 100%);
         }
         /* Banner cross watermark */
         .banner-cross {
@@ -877,8 +878,20 @@
             position: relative;
             z-index: 1;
             padding: 4rem 2rem 2rem;
-            background: var(--dark-surface);
-            border-top: 1px solid rgba(201, 168, 76, 0.06);
+            background: var(--deep-navy);
+            border-top: none;
+            overflow: hidden;
+        }
+        .footer-img {
+            position: absolute;
+            inset: 0;
+            background: url('Hereford-Karte.jpg') center center / cover no-repeat;
+            opacity: 0.10;
+        }
+        .footer-bg {
+            position: absolute;
+            inset: 0;
+            background: linear-gradient(180deg, var(--deep-navy) 0%, var(--deep-navy) 8%, rgba(10,10,20,0.5) 25%, rgba(10,10,20,0.5) 75%, var(--deep-navy) 92%, var(--deep-navy) 100%);
         }
         .footer-content {
             max-width: 1200px;
@@ -1174,10 +1187,8 @@
 
     <!-- Hero Section -->
     <section class="hero" id="hero">
+        <div class="hero-img" aria-hidden="true"></div>
         <div class="hero-bg" aria-hidden="true"></div>
-        <div class="hero-vignette" aria-hidden="true"></div>
-        <div class="hero-cross-bg" aria-hidden="true"></div>
-        <div class="hero-texture" aria-hidden="true"></div>
 
         <div class="hero-content" id="heroContent">
             <div class="hero-emblem" data-parallax="0.03">
@@ -1240,7 +1251,9 @@
 
     <!-- Mission Section -->
     <section class="mission section-padding" id="mission">
-        <div class="section-texture" aria-hidden="true" data-scroll-parallax="0.03"></div>
+        <div class="mission-img" aria-hidden="true"></div>
+        <div class="mission-bg" aria-hidden="true"></div>
+
         <div class="container">
             <div class="section-header reveal">
                 <span class="section-label">Our Calling</span>
@@ -1277,23 +1290,11 @@
         </div>
     </section>
 
-    <!-- Ornamental Divider -->
-    <div class="ornamental-divider" aria-hidden="true">
-        <div class="line"></div>
-        <div class="diamond"></div>
-        <svg viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
-            <line x1="12" y1="2" x2="12" y2="22" stroke="currentColor" stroke-width="1.5"/>
-            <line x1="5" y1="8" x2="19" y2="8" stroke="currentColor" stroke-width="1.5"/>
-            <circle cx="12" cy="2" r="1" fill="currentColor" opacity="0.5"/>
-            <circle cx="12" cy="22" r="1" fill="currentColor" opacity="0.5"/>
-        </svg>
-        <div class="diamond"></div>
-        <div class="line"></div>
-    </div>
-
     <!-- Pillars Section -->
     <section class="pillars section-padding" id="pillars">
-        <div class="section-texture" aria-hidden="true" data-scroll-parallax="0.03"></div>
+        <div class="pillars-img" aria-hidden="true"></div>
+        <div class="pillars-bg" aria-hidden="true"></div>
+
         <div class="container">
             <div class="section-header reveal">
                 <span class="section-label">Our Foundation</span>
@@ -1374,21 +1375,11 @@
         </div>
     </section>
 
-    <!-- Ornamental Divider -->
-    <div class="ornamental-divider" aria-hidden="true">
-        <div class="line"></div>
-        <div class="diamond"></div>
-        <svg viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
-            <path d="M12 2L14 8H20L15 12L17 18L12 14L7 18L9 12L4 8H10L12 2Z"
-                  stroke="currentColor" stroke-width="1" fill="none" opacity="0.6"/>
-        </svg>
-        <div class="diamond"></div>
-        <div class="line"></div>
-    </div>
-
     <!-- What We Build Section -->
     <section class="services section-padding" id="services">
-        <div class="section-texture" aria-hidden="true" data-scroll-parallax="0.03"></div>
+        <div class="services-img" aria-hidden="true"></div>
+        <div class="services-bg" aria-hidden="true"></div>
+
         <div class="container">
             <div class="section-header reveal">
                 <span class="section-label">Our Arsenal</span>
@@ -1475,23 +1466,11 @@
         </div>
     </section>
 
-    <!-- Ornamental Divider -->
-    <div class="ornamental-divider" aria-hidden="true">
-        <div class="line"></div>
-        <div class="diamond"></div>
-        <svg viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
-            <line x1="12" y1="2" x2="12" y2="22" stroke="currentColor" stroke-width="1.5"/>
-            <line x1="5" y1="8" x2="19" y2="8" stroke="currentColor" stroke-width="1.5"/>
-            <circle cx="12" cy="2" r="1" fill="currentColor" opacity="0.5"/>
-            <circle cx="12" cy="22" r="1" fill="currentColor" opacity="0.5"/>
-        </svg>
-        <div class="diamond"></div>
-        <div class="line"></div>
-    </div>
-
     <!-- Manifesto Section -->
     <section class="manifesto section-padding" id="manifesto">
-        <div class="section-texture" aria-hidden="true" data-scroll-parallax="0.03"></div>
+        <div class="manifesto-img" aria-hidden="true"></div>
+        <div class="manifesto-bg" aria-hidden="true"></div>
+
         <div class="container">
             <div class="section-header reveal">
                 <span class="section-label">Our Conviction</span>
@@ -1532,7 +1511,9 @@
 
     <!-- Footer -->
     <footer>
-        <div class="footer-content">
+        <div class="footer-img" aria-hidden="true"></div>
+        <div class="footer-bg" aria-hidden="true"></div>
+        <div class="footer-content" style="position:relative;z-index:1;">
             <div class="footer-logo">
                 <svg viewBox="0 0 40 52" fill="none" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
                     <path d="M20 2L38 10V28C38 38 20 50 20 50C20 50 2 38 2 28V10L20 2Z" stroke="currentColor" stroke-width="1.5" fill="none"/>
@@ -1721,16 +1702,9 @@
 
         // ===== SCROLL-LINKED PARALLAX ON SECTIONS =====
         const scrollParallaxEls = document.querySelectorAll('[data-scroll-parallax]');
-        const heroCrossBg = document.querySelector('.hero-cross-bg');
 
         function updateScrollParallax() {
             const scrollY = window.scrollY;
-
-            // Parallax the hero cross watermark
-            if (heroCrossBg) {
-                const heroOffset = scrollY * 0.08;
-                heroCrossBg.style.transform = `translate(-50%, calc(-50% + ${heroOffset}px))`;
-            }
 
             // Parallax each section texture
             scrollParallaxEls.forEach(el => {
